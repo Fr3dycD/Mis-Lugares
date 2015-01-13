@@ -30,7 +30,7 @@
             android:label="Vista lugar"
             android:theme="@style/AppTheme"/>
 
-        <activity android:name=".EdicionLugar"
+        <activity android:name="EdicionLugar"
             android:label="Edicion lugar"
             android:theme="@style/AppTheme" />
 

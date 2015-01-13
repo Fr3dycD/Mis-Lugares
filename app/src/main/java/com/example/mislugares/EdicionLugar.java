@@ -2,6 +2,7 @@ package com.example.mislugares;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ArrayAdapter;
@@ -17,7 +18,7 @@ import java.text.DateFormat;
 /**
  * Created by Jorge on 13/12/2014.
  */
-public class EdicionLugar extends Activity {
+public class EdicionLugar extends ActionBarActivity {
 
     private EditText nombre, direccion, telefono, url, comentario;
     private Spinner tipo;

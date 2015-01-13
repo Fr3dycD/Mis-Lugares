@@ -6,8 +6,8 @@
     <item android:title="Configuración"
         android:id="@+id/config"
         android:icon="@android:drawable/ic_menu_preferences"
-        android:orderInCategory="95"
-        app:showAsAction="ifRoom" />
+        android:orderInCategory="95" />
+        <!--app:showAsAction="ifRoom" /> -->
 
     <item android:title="Acerca de..."
         android:id="@+id/acercaDe"
