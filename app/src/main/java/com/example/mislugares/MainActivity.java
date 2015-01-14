@@ -9,6 +9,9 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.TextView;
+
+import java.text.NumberFormat;
 
 
 public class MainActivity extends ActionBarActivity {
@@ -40,11 +43,18 @@ public class MainActivity extends ActionBarActivity {
                 .setView(entrada)
                 .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int whichButton) {
-                        long id = Long.parseLong(entrada.getText().toString());
-                        Intent i = new Intent(MainActivity.this, VistaLugar.class);
-                        i.putExtra("id", id);
-                        startActivity(i);
-                    }})
+                        try {
+                            long id = Long.parseLong(entrada.getText().toString());
+
+                            Intent i = new Intent(MainActivity.this, VistaLugar.class);
+                            i.putExtra("id", id);
+                            startActivity(i);
+                        } catch (NumberFormatException nfe) {
+                            TextView err = (TextView) inflater.inflate(com.android.internal.R.layout.textview_hint,
+                                    null);
+                        }
+                    }
+                })
 
                 .setNegativeButton("Cancelar", null)
                 .show();
